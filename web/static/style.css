@@ -1,0 +1,224 @@
+
+        *{
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            /*box-sizing: border-box;*/
+        }
+        body {
+            /*position:  absolute;
+            height: 100vh;
+            width: 100vw;*/
+            font: 15px/1.5 Verdana, Sans-Serif;
+            font-weight: bold;
+            background: #0e0e0e;
+        }
+        #container {
+            /*margin: 100px auto;*/
+            position: fixed;
+            top: 100vh;
+            left: 50vw;
+            transform: translate(-50%,-110%);
+            width: 100vw;/*688px;*/
+        }
+        #keyboard {
+            position: relative;
+            left: 5vw;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #keyboard li {
+            float: left;
+            margin: 0 5px 5px 0;
+            width: 5.5vw;/*40px;*/
+            height: 5.5vw;/*40px;*/
+            line-height: 5.5vw;
+            text-align: center;
+            background: #1f1f1f;
+            border: 1px solid #3d3d3d;
+            border-radius: 5%;
+        }
+        .capslock, .tab, .left-shift, .left-ctrl {
+            clear: left;
+        }
+        #keyboard .tab, #keyboard .delete {
+            width: 8vw;/*70px;*/
+        }
+        #keyboard .capslock {
+            width: 9vw;/*80px;*/
+        }
+        #keyboard .return {
+            width: 10.7vw;/*77px;*/
+        }
+        #keyboard .left-shift{
+            width: 12vw;/*95px;*/
+            /*border: 1px solid #05b8ff;
+            color:  #01b1f6;
+            background: #161e20;
+            font-weight: bold;*/
+        }
+        #keyboard .scroll-lock{
+            width: 11.69vw;
+        }
+        #keyboard .right-shift{
+            width: 14vw;/*109px;*/
+        }
+        #keyboard .space {
+            width: 38.8vw;/*93vw;681px;*/
+        }
+        #keyboard .delete{
+            background: url('backspace.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #keyboard .return{
+            background: url('enter.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #keyboard .cmd{
+            background: url('cmd.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #keyboard .menu{
+            background: url('menu.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #keyboard .fullscreen{
+            background: url('full.png');
+            background-repeat: no-repeat;
+            background-size: cover;   
+        }
+        #keyboard .fullscreen-off{
+            background: url('exit.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #keyboard .up{
+            background: url('up.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #keyboard .down{
+            background: url('down.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #keyboard .left{
+            background: url('left.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #keyboard .right{
+            background: url('right.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #keyboard .function, #keyboard .more{
+            color: #00fff2;
+        }
+        #keyboard .back, #keyboard .func-on{
+            background-color: #00fff2;
+            color: #0e0e0e;
+            font-weight: bolder;
+        }
+        #keyboard .func-on{
+            background-color: #00ff15;
+        }
+        #keyboard li:hover {
+
+            border-color: #e5e5e59d;
+            cursor: pointer;
+        }
+        .on {
+            display: none;
+        }
+        .lastitem {
+            margin-right: 0;
+        }
+        .uppercase {
+            text-transform: uppercase;
+        }
+        .shift-on{
+            color:  #008cff;
+            box-shadow: 0 0 20px #008cffd2 inset;
+        }
+        .alt-on{
+            color:  #ff0000;
+            box-shadow: 0 0 10px #ff0000bb inset;
+        }
+        .ctrl-on{
+            color:  #00ff15;
+            box-shadow: 0 0 10px #00ff15bb inset;
+        }
+        .hold-on{
+            color:  #eeff00;
+            box-shadow: 0 0 10px #eeff00bb inset;
+        }
+        .imgback{
+            color: #fff;
+            /*box-shadow: 0 0 70px #6161614b inset;*/
+        }
+        
+        @media (max-width: 910px){
+            *{
+                font: 10px/1.5 Verdana, Sans-Serif;
+            }
+            #keyboard li {
+                margin: 0 3px 3px 0;
+            }
+        }
+        @media (max-width: 600px){
+            *{
+                font: 8px/1.5 Verdana, Sans-Serif;
+            }
+        }
+        @media (max-width: 500px){  
+            #container {
+                /*margin: 100px auto;*/
+                position: fixed;
+                top: 0;
+                left: 50vw;
+                transform: translate(-50%, 95%) rotate(90deg);
+                width: 100vh;/*688px;*/
+            }
+            #keyboard {
+                position: relative;
+                left: 5vh;
+                width: 100vh;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            #keyboard li {
+                margin: 0 2px 2px 0;
+                width: 6vh;/*40px;*/
+                height: 6vh;/*40px;*/
+            }
+            #keyboard .tab{
+                width: 6.5vh;
+            } 
+            #keyboard .delete {
+                width: 6.5vh;
+            }
+            #keyboard .capslock {
+                width: 7vh;
+            }
+            #keyboard .return {
+                width: 12.1vh;
+            }
+            #keyboard .left-shift, #keyboard .right-shift{
+                width: 12.95vh;
+            }
+            #keyboard .scroll-lock{
+                width: 12.6vh;
+            }
+            #keyboard .space {
+                width: 39.7vh;
+            }
+        }

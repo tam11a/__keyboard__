@@ -1,0 +1,8 @@
+Kivy==1.11.1
+kivymd==0.104.1
+kivy-deps.glew==0.2.0
+kivy-deps.sdl2==0.2.0
+pynput==1.6.8
+qrcode==6.1
+Pillow==7.2.0
+Flask==1.1.2

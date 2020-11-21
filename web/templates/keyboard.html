@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Keyboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+ 
+<div id="container">
+    <ul id="keyboard">
+      <span class="functionpad on">
+        <li class="function back">Esc</li>
+        <li class="function">F1</li>
+        <li class="function">F2</li>
+        <li class="function">F3</li>
+        <li class="function">F4</li>
+        <li class="function">F5</li>
+        <li class="function">F6</li>
+        <li class="function">F7</li>
+        <li class="function">F8</li>
+        <li class="function">F9</li>
+        <li class="function">F10</li>
+        <li class="function">F11</li>
+        <li class="function">F12</li>
+      </span>
+      <span class="numberpad">
+        <li class="symbol"><span class="num">`</span><span class="extn on">~</span></li>
+        <li class="symbol"><span class="num">1</span><span class="extn on">!</span></li>
+        <li class="symbol"><span class="num">2</span><span class="extn on">@</span></li>
+        <li class="symbol"><span class="num">3</span><span class="extn on">#</span></li>
+        <li class="symbol"><span class="num">4</span><span class="extn on">$</span></li>
+        <li class="symbol"><span class="num">5</span><span class="extn on">%</span></li>
+        <li class="symbol"><span class="num">6</span><span class="extn on">^</span></li>
+        <li class="symbol"><span class="num">7</span><span class="extn on">&amp;</span></li>
+        <li class="symbol"><span class="num">8</span><span class="extn on">*</span></li>
+        <li class="symbol"><span class="num">9</span><span class="extn on">(</span></li>
+        <li class="symbol"><span class="num">0</span><span class="extn on">)</span></li>
+        <li class="symbol"><span class="num">-</span><span class="extn on">_</span></li>
+        <li class="symbol"><span class="num">=</span><span class="extn on">+</span></li>
+      </span>
+        <li class="delete imgback lastitem" onclick="press('backspace')"></li>
+        <li class="tab" onclick="press('tab')">tab</li>
+        <li class="letter">q</li>
+        <li class="letter numberpad">w</li>
+        <li class="arrow up functionpad on" onclick="press('up')"></li>
+        <li class="letter">e</li>
+        <li class="letter">r</li>
+        <span class="numberpad">
+          <li class="letter">t</li>
+          <li class="letter">y</li>
+        </span>
+        <span class="functionpad on">
+          <li class="function scroll-lock numlock">num lock</li>
+        </span>
+        <li class="letter">u</li>
+        <span class="numberpad">
+          <li class="letter">i</li>
+          <li class="letter">o</li>
+          <li class="letter">p</li>
+          <li class="symbol"><span class="num">[</span><span class="extn on">{</span></li>
+        </span>
+        <span class="functionpad on">
+          <li class="function">prtscr</li>
+          <li class="function scroll-lock scrllock">scroll lock</li>
+          <li class="function">pause</li>
+        </span>
+        <li class="symbol"><span class="num">]</span><span class="extn on">}</span></li>
+        <li class="symbol lastitem"><span class="num">\</span><span class="extn on">|</span></li>
+        <li class="capslock" onclick="press_caps()">caps lock</li>
+        <span class="numberpad">
+          <li class="letter">a</li>
+          <li class="letter">s</li>
+          <li class="letter">d</li>
+        </span>
+        <span class="functionpad on">
+          <li class="arrow left" onclick="press('left')"></li>
+          <li class="arrow down" onclick="press('down')"></li>
+          <li class="arrow right" onclick="press('right')"></li>
+        </span>
+        <li class="letter">f</li>
+        <li class="letter">g</li>
+        <li class="letter">h</li>
+        <li class="letter">j</li>
+        <span class="numberpad">
+          <li class="letter">k</li>
+          <li class="letter">l</li>
+          <li class="symbol"><span class="num">;</span><span class="extn on">:</span></li>
+          <li class="symbol"><span class="num">'</span><span class="extn on">&quot;</span></li>
+        </span>
+        <span class="functionpad on">
+          <li class="function">insert</li>
+          <li class="function">home</li>
+          <li class="function scroll-lock">page up</li>
+        </span>
+        <li class="return imgback lastitem" onclick="press('return')"></li>
+        <li class="left-shift" onclick="press_shift()">shift</li>
+        <li class="letter">z</li>
+        <li class="letter">x</li>
+        <li class="letter">c</li>
+        <li class="letter">v</li>
+        <li class="letter">b</li>
+        <span class="numberpad">
+          <li class="letter">n</li>
+          <li class="letter">m</li>
+          <li class="symbol"><span class="num">,</span><span class="extn on">&lt;</span></li>
+          <li class="symbol"><span class="num">.</span><span class="extn on">&gt;</span></li>
+        </span>
+        <span class="functionpad on">
+          <li class="function">delete</li>
+          <li class="function">end</li>
+          <li class="function scroll-lock">page down</li>
+        </span>
+        <li class="symbol"><span class="num">/</span><span class="extn on">?</span></li>
+        <li class="right-shift lastitem" onclick="press_shift()">shift</li>
+        <li class="left-ctrl" onclick="press_ctrl()">ctrl</li>
+        <li class="cmd imgback" onclick="press('cmd')"></li>        
+        <li class="left-alt" onclick="press_alt()">alt</li>        
+        <li class="space" onclick="press('space')">space</li>
+        <li class="right-ctrl" onclick="press_ctrl()">ctrl</li>
+        <li class="menu imgback"  onclick="press('menu')"></li>        
+        <li class="right-alt" onclick="press_alt()">alt</li>        
+        <li class="more" onclick="more()"> ... </li>
+        <li class="fullscreen imgback lastitem" onclick="fullscreen_win()"></li>        
+    </ul>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="{{url_for('static', filename='main.js')}}"></script>
+</body>
+</html>
