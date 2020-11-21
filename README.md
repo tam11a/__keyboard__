@@ -6,9 +6,10 @@ No Android App for the Process.
 
 Steps in the Application:
 1. Start
-2. Select the IP Address of the Router, Your Phone/Tab is connected.
+2. Select the IP Address of the Router, Your Phone/Tab and Computer is connected.
 3. Select Port (optional)
-4. Browse the link or QR Code in Your Phone/Tab
+4. Browse the link or scan QR Code in Your Phone/Tab or any other device connect to the same nerwork.
+
 
 Github Link: https://github.com/tam11a/__keyboard__
 
